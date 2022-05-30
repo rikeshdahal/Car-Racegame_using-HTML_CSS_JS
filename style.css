@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    animation: shakebody linear 6s infinite;
+}
+.sky{
+    height: 100vh;
+    width: 100%;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.trees{
+    height: 100vh;
+    width: 100%;
+    background-image: url(trees.png);
+    background-size: cover; 
+    position: absolute;
+    top: -14px; 
+    animation: shakes linear .3s infinite;
+}
+.tracks{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(tracks.png);
+    background-repeat: repeat-x; 
+    position: absolute;
+    top: 70vh;
+    
+
+}
+
+.car{
+    height: 200px;
+    width: 300px;
+    background-image: url(car_body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 444px;
+    bottom:0vh;
+    animation: shake linear .3s infinite;
+    animation: moves linear .5s infinite;
+    
+    
+    
+
+}
+
+.wheel1 img{
+    width: 77px;
+    position: relative;
+    top:102px;
+    left:49px;
+    
+}
+
+
+
+.wheel2 img{
+    width: 77px;
+    position: relative;
+    top: 30px;
+    left: 225px;
+    
+
+}
+@keyframes wheelRotation1
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes wheelRotation2
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove
+{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+@keyframes shakes
+{
+    100 %{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+    100%{
+        transform: translateY(1px);
+    }
+}
+@keyframes jump
+{
+    0%{
+        transform: translateY(-80px);
+    }
+    10%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);  
+    }
+}
+@keyframes moves
+{
+    100 %{
+        transform: translateY(-2px);
+    }
+    100%{
+        transform: translateY(2px);
+    }
+    100%{
+        transform: translateY(1px);
+    }
+}
+.carMove {
+    animation: carMove linear 13s infinite;
+}
+.wheelRotation2{
+    animation: wheelRotation2 linear .16s infinite;
+}
+.wheelRotation1{
+    animation: wheelRotation1 linear .16s infinite;
+}
+.jump {
+    animation: jump linear 10s infinite;
+}
+
+
+
